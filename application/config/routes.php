@@ -56,3 +56,18 @@ $route['translate_uri_dashes'] = FALSE;
 $route['dashboard'] = 'welcome';
 $route['login'] = 'auth/authController';
 
+//doctor
+$route['schedule'] = 'doctor/scheduleController';
+$route['appointments'] = 'doctor/appointmentsController';
+$route['appointment/(:num)'] = 'doctor/appointmentController/index/$1';
+
+//patient
+$route['doctors'] = 'patient/doctorsController';
+$route['booking/(:num)'] = 'patient/bookingController/index/$1';
+$route['bookings'] = 'patient/bookingsController/index/$1';
+$route['collections'] = 'patient/collectionsController';
+$route['collection/(:num)'] = 'patient/collectionController/index/$1';
+
+
+
+

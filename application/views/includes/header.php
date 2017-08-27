@@ -15,6 +15,8 @@
     <link href="<?php echo assets_url();  ?>/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Animation library for notifications   -->
+    <link href="<?php echo assets_url();  ?>/css/jquery-ui.min.css" rel="stylesheet"/>
+    <link href="<?php echo assets_url();  ?>/css/jquery-ui-timepicker-addon.css" rel="stylesheet"/>
     <link href="<?php echo assets_url();  ?>/css/animate.min.css" rel="stylesheet"/>
 
     <!--  Light Bootstrap Table core CSS    -->
@@ -23,6 +25,30 @@
     <!--     Fonts and icons     -->
     <link href="<?php echo assets_url();  ?>/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="<?php echo assets_url();  ?>/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+
+
+
+    <!--   Core JS Files   -->
+    <script src="<?php echo assets_url();  ?>/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="<?php echo assets_url();  ?>/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <script src="<?php echo assets_url();  ?>/js/bootstrap-checkbox-radio-switch.js"></script>
+    <script src="<?php echo assets_url();  ?>/js/jquery-ui.min.js"></script>
+    <script src="<?php echo assets_url();  ?>/js/jquery-ui-timepicker-addon.js"></script>
+
+    <!--  Charts Plugin -->
+    <script src="<?php echo assets_url();  ?>/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="<?php echo assets_url();  ?>/js/bootstrap-notify.js"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="<?php echo assets_url();  ?>/js/light-bootstrap-dashboard.js"></script>
+
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="<?php echo assets_url();  ?>/js/demo.js"></script>
     
 </head>
 <body>
@@ -47,7 +73,7 @@
             <ul class="nav">
                 <li class="active">
                     <a href="<?php echo base_url('dashboard'); ?>">
-                        <i class="pe-7s-graph"></i>
+                        <i class="pe-7s-home"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
@@ -55,6 +81,38 @@
                     <a href="<?php echo base_url('login'); ?>">
                         <i class="pe-7s-user"></i>
                         <p>Login</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url('schedule'); ?>">
+                        <i class="pe-7s-alarm"></i>
+                        <p>My Schedule</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url('appointments'); ?>">
+                        <i class="pe-7s-note2"></i>
+                        <p>Appointments</p>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="<?php echo base_url('doctors'); ?>">
+                        <i class="pe-7s-users"></i>
+                        <p>Doctors</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url('bookings'); ?>">
+                        <i class="pe-7s-note2"></i>
+                        <p>My Bookings</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url('collections'); ?>">
+                        <i class="pe-7s-copy-file"></i>
+                        <p>Document Collections</p>
                     </a>
                 </li>
 
@@ -72,10 +130,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="#"><?php echo isset($title) ? $title : ""; ?></a>
+                    <?php echo isset($dom) ? $dom : ""; ?>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
+                    <!-- <ul class="nav navbar-nav navbar-left">
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-dashboard"></i>
@@ -91,7 +150,7 @@
                         </li>
 
 
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </nav>
