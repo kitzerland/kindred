@@ -54,19 +54,32 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['dashboard'] = 'welcome';
+
 $route['login'] = 'auth/authController';
 
 //doctor
+$route['doctor_profile'] = 'doctor/profileController';
+$route['doctor_registration'] = 'doctor/registrationController';
 $route['schedule'] = 'doctor/scheduleController';
 $route['appointments'] = 'doctor/appointmentsController';
 $route['appointment/(:num)'] = 'doctor/appointmentController/index/$1';
 
+
+
 //patient
+$route['patient_registration'] = 'patient/registrationController';
+$route['patient_profile'] = 'patient/profileController';
 $route['doctors'] = 'patient/doctorsController';
 $route['booking/(:num)'] = 'patient/bookingController/index/$1';
 $route['bookings'] = 'patient/bookingsController/index/$1';
 $route['documents'] = 'patient/documentsController';
 $route['document/(:num)'] = 'patient/documentController/index/$1';
+
+
+//admin
+$route['users'] = 'admin/usersController';
+
+
 
 
 

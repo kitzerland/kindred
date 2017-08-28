@@ -6,7 +6,6 @@ class AppointmentController extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        return "hello";
         // $this->load->model('auth/auth');
 
     }

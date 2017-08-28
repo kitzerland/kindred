@@ -164,6 +164,9 @@
                     <input type="password" placeholder="password">
                     <button class="btn btn-info btn-block login" type="submit">Login</button>
                 </form>
+                <a href="<?php echo base_url('/patient_registration'); ?>">New Patient?</a>
+                </br>
+                <a href="<?php echo base_url('/doctor_registration'); ?>">New Doctor?</a>
             </div>
         </div>
     </div>

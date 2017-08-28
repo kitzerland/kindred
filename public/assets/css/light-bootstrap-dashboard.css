@@ -237,23 +237,24 @@ input:focus {
   font-weight: 200;
   background-size: cover;
   background-position: center center;
+  overflow-x: hidden !important;
 }
 .sidebar .sidebar-wrapper {
   position: relative;
-  max-height: none;
-  min-height: 100%;
-  overflow: hidden;
   width: 260px;
+  min-height: 100%;
   z-index: 4;
 }
 .sidebar .sidebar-background {
   position: absolute;
   z-index: 1;
   height: 100%;
+  min-height: 100% !important;
   width: 100%;
   display: block;
   top: 0;
   left: 0;
+  bottom: 0;
   background-size: cover;
   background-position: center center;
 }

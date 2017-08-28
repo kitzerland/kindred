@@ -71,16 +71,11 @@
             </div>
 
             <ul class="nav">
+                
                 <li class="active">
                     <a href="<?php echo base_url('dashboard'); ?>">
                         <i class="pe-7s-home"></i>
                         <p>Dashboard</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo base_url('users'); ?>">
-                        <i class="pe-7s-user"></i>
-                        <p>Admin Area</p>
                     </a>
                 </li>
                 <li>
@@ -89,51 +84,7 @@
                         <p>Login</p>
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo base_url('schedule'); ?>">
-                        <i class="pe-7s-alarm"></i>
-                        <p>My Schedule</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo base_url('appointments'); ?>">
-                        <i class="pe-7s-note2"></i>
-                        <p>Appointments</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo base_url('doctor_profile'); ?>">
-                        <i class="pe-7s-user"></i>
-                        <p>Doctor Profile</p>
-                    </a>
-                </li>
 
-
-                <li>
-                    <a href="<?php echo base_url('doctors'); ?>">
-                        <i class="pe-7s-users"></i>
-                        <p>Doctors</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo base_url('bookings'); ?>">
-                        <i class="pe-7s-note2"></i>
-                        <p>My Bookings</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo base_url('documents'); ?>">
-                        <i class="pe-7s-copy-file"></i>
-                        <p>Documents</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo base_url('patient_profile'); ?>">
-                        <i class="pe-7s-user"></i>
-                        <p>Patient Profile</p>
-                    </a>
-                </li>
-                
             </ul>
     	</div>
     </div>

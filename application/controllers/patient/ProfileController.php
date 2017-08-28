@@ -1,22 +1,22 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class AuthController extends CI_Controller {
+class ProfileController extends CI_Controller {
 
 	public function __construct()
     {
         parent::__construct();
 
-        $this->load->model('auth/auth');
+        // $this->load->model('auth/auth');
 
     }
 
     public function index(){
     	$data = [
-    		"view" => "auth/index",
+    		"view" => "patient/profile",
     		"title" => "My Profile"
     	];
-        $this->load->view("auth/template", $data);
+        $this->load->view("template", $data);
     }
 
 }

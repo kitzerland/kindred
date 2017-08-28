@@ -6,9 +6,7 @@
 		</div>
 		<div class="form-group">
 			<label class="control-label">Description</label>
-			<textarea rows="4" class="form-control" name="description" style="resize: vertical; min-height: 110px;">
-				
-			</textarea>
+			<textarea rows="4" class="form-control" name="description" style="resize: vertical; min-height: 110px;"></textarea>
 		</div>
 		<div class="form-group">
 			<button class="btn btn-primary">Upload</button>
