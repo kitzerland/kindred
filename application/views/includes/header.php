@@ -110,9 +110,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('collections'); ?>">
+                    <a href="<?php echo base_url('documents'); ?>">
                         <i class="pe-7s-copy-file"></i>
-                        <p>Document Collections</p>
+                        <p>Documents</p>
                     </a>
                 </li>
 

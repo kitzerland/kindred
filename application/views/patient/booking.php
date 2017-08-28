@@ -8,27 +8,25 @@
                 <table class="table table-hover">
 					<thead>
 						<tr>
-							<th>Date</th>
+							<th width="35%">Date</th>
 							<th>-- -- ----</th>
 						</tr>
 						<tr>
-							<th>Area</th>
+							<th width="35%">Area</th>
 							<th>--</th>
 						</tr>
 						<tr>
-							<th>Doctor</th>
+							<th width="35%">Doctor</th>
 							<th>--</th>
 						</tr>
 						<tr>
-							<th>Time Slot</th>
+							<th width="35%">Time Slot</th>
 							<th><select class="form-control" style="height: 30px; padding: 0px 5px 0px 5px;"></th>
 						</tr>
 						<tr>
-							<th>Documents</th>
+							<th width="35%">Show Documents</th>
 							<th>
-								<select class="form-control" style="height: 30px; padding: 0px 5px 0px 5px;">
-									<option value="">Select a document collection</option>
-								</select>
+								<input type="checkbox">
 							</th>
 						</tr>
 						<tr>

@@ -65,8 +65,8 @@ $route['appointment/(:num)'] = 'doctor/appointmentController/index/$1';
 $route['doctors'] = 'patient/doctorsController';
 $route['booking/(:num)'] = 'patient/bookingController/index/$1';
 $route['bookings'] = 'patient/bookingsController/index/$1';
-$route['collections'] = 'patient/collectionsController';
-$route['collection/(:num)'] = 'patient/collectionController/index/$1';
+$route['documents'] = 'patient/documentsController';
+$route['document/(:num)'] = 'patient/documentController/index/$1';
 
 
 

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class CollectionController extends CI_Controller {
+class DocumentController extends CI_Controller {
 
 	public function __construct()
     {
@@ -13,7 +13,7 @@ class CollectionController extends CI_Controller {
 
     public function index($slug){
     	$data = [
-    		"view" => "patient/collection",
+    		"view" => "patient/document",
     		"title" => "Upload Documents"
     	];
         $this->load->view("template", $data);
