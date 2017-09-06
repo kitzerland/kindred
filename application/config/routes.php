@@ -55,29 +55,72 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['dashboard'] = 'welcome';
 
-$route['login'] = 'auth/authController';
+$route['login']['get'] = 'auth/authController';
+$route['login']['post'] = 'auth/authController/login';
+$route['logout']['get'] = 'auth/authController/logout';
 
 //doctor
-$route['doctor_profile'] = 'doctor/profileController';
-$route['doctor_registration'] = 'doctor/registrationController';
+$route['doctor_registration']['get'] = 'doctor/registrationController';
+$route['doctor_registration']['post'] = 'doctor/registrationController/create';
+
+$route['doctor_profile']['get'] = 'doctor/profileController';
+$route['doctor_profile']['post'] = 'doctor/profileController/update';
+
 $route['schedule'] = 'doctor/scheduleController';
+$route['schedule/create'] = 'doctor/scheduleController/create';
+$route['schedule/(:num)/delete'] = 'doctor/scheduleController/delete/$1';
+
 $route['appointments'] = 'doctor/appointmentsController';
+$route['appointments/(:num)/discard'] = 'doctor/appointmentsController/discard/$1';
+$route['appointments/(:num)/confirm']['post'] = 'doctor/appointmentsController/confirm/$1';
+
+$route['appointments/(:num)/patient']['get'] = 'doctor/appointmentsController/patient/$1';
+$route['appointments/(:num)/patient']['post'] = 'doctor/appointmentsController/rate/$1';
+
+
 $route['appointment/(:num)'] = 'doctor/appointmentController/index/$1';
 
 
 
 //patient
-$route['patient_registration'] = 'patient/registrationController';
-$route['patient_profile'] = 'patient/profileController';
-$route['doctors'] = 'patient/doctorsController';
-$route['booking/(:num)'] = 'patient/bookingController/index/$1';
+$route['patient_registration']['get'] = 'patient/registrationController';
+$route['patient_registration']['post'] = 'patient/registrationController/create';
+
+$route['patient_profile']['get'] = 'patient/profileController';
+$route['patient_profile']['post'] = 'patient/profileController/update';
+
+
+//doctors php
+$route['doctors']['get'] = 'patient/doctorsController';
+
+
+
+$route['booking/(:num)']['get'] = 'patient/bookingController/index/$1';
+$route['booking/(:num)']["post"] = 'patient/bookingController/book/$1';
+// $route['book']['post'] = 'patient/bookingController/book';
+
 $route['bookings'] = 'patient/bookingsController/index/$1';
+$route['bookings/(:num)/delete'] = 'patient/bookingsController/delete/$1';
+$route['bookings/(:num)/doctor']['get'] = 'patient/bookingsController/doctor/$1';
+$route['bookings/(:num)/doctor']['post'] = 'patient/bookingsController/rate/$1';
+
+
+
+
 $route['documents'] = 'patient/documentsController';
 $route['document/(:num)'] = 'patient/documentController/index/$1';
 
 
 //admin
-$route['users'] = 'admin/usersController';
+$route['users']['get'] = 'admin/usersController';
+$route['user/(:num)/deactivate']['get'] = 'admin/usersController/deactivate/$1';
+$route['user/(:num)/activate']['get'] = 'admin/usersController/activate/$1';
+$route['user/(:num)/reset']['get'] = 'admin/usersController/reset/$1';
+$route['user/(:num)/delete']['get'] = 'admin/usersController/delete/$1';
+
+
+//city
+// $route['cities']['post'] = 'city/citiesController/cities';
 
 
 

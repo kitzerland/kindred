@@ -1,20 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="<?php echo assets_url();  ?>/img/favicon.ico">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-	<title>Kindred</title>
-
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-
-    <link href="<?php echo assets_url();  ?>/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="<?php echo assets_url();  ?>/css/font-awesome.min.css" rel="stylesheet"/>
-
-    <style>
-        body{background: #eee url(public/assets/img/sativa.png);}
+<div class="row">
+    <style type="text/css">
+    body{background: #eee url(/public/assets/img/sativa.png);}
         html,body{
             position: relative;
             height: 100%;
@@ -151,17 +137,15 @@
         animation-name: fadeInUp;
         }
     </style>
-</head>
-<body>
     <div class="container">
         <div class="login-container">
             <div id="output"></div>
             <!-- <div class="avatar"></div> -->
             <div class="avatar"></div>
             <div class="form-box">
-                <form action="<?php echo base_url('/dashboard'); ?>" method="">
-                    <input name="user" type="text" placeholder="username">
-                    <input type="password" placeholder="password">
+                <form action="<?php echo base_url('/login'); ?>" method="POST">
+                    <input type="text" name="username" autofocus="true" placeholder="username">
+                    <input type="password" name="password" placeholder="password">
                     <button class="btn btn-info btn-block login" type="submit">Login</button>
                 </form>
                 <a href="<?php echo base_url('/patient_registration'); ?>">New Patient?</a>
@@ -170,15 +154,4 @@
             </div>
         </div>
     </div>
-
-    <script src="<?php echo assets_url();  ?>/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="<?php echo assets_url();  ?>/js/bootstrap.min.js" type="text/javascript"></script>
-    <script>
-        $(document).ready(function(){
-            
-        });
-    </script>
-
-</body>
-</html>
-
+</div>

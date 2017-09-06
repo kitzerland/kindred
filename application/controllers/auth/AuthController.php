@@ -14,9 +14,19 @@ class AuthController extends CI_Controller {
     public function index(){
     	$data = [
     		"view" => "auth/index",
-    		"title" => "My Profile"
+    		"title" => "Login"
     	];
-        $this->load->view("auth/template", $data);
+        $this->load->view("template", $data);
+    }
+
+    public function login(){
+        $data = $this->input->post();
+        $this->flash->old(["username" => $data["username"]]);
+        return $this->auth->login($data);
+    }
+
+    public function logout(){
+        return $this->auth->logout();
     }
 
 }

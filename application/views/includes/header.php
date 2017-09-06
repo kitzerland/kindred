@@ -77,16 +77,29 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo base_url('users'); ?>">
-                        <i class="pe-7s-user"></i>
-                        <p>Admin Area</p>
-                    </a>
-                </li>
+                <?php if(!$this->session->userdata('logged_in')): ?>
                 <li>
                     <a href="<?php echo base_url('login'); ?>">
                         <i class="pe-7s-user"></i>
                         <p>Login</p>
+                    </a>
+                </li>
+                <?php endif; ?>
+                
+                <?php if($this->session->userdata('type') == 99): ?>
+                <li>
+                    <a href="<?php echo base_url('users'); ?>">
+                        <i class="pe-7s-users"></i>
+                        <p>Manage Users</p>
+                    </a>
+                </li>
+                <?php endif; ?>
+                
+                <?php if($this->session->userdata('type') == 2): ?>
+                <li>
+                    <a href="<?php echo base_url('appointments'); ?>">
+                        <i class="pe-7s-note2"></i>
+                        <p>Appointments</p>
                     </a>
                 </li>
                 <li>
@@ -95,20 +108,11 @@
                         <p>My Schedule</p>
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo base_url('appointments'); ?>">
-                        <i class="pe-7s-note2"></i>
-                        <p>Appointments</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo base_url('doctor_profile'); ?>">
-                        <i class="pe-7s-user"></i>
-                        <p>Doctor Profile</p>
-                    </a>
-                </li>
+                <?php endif; ?>
+                
 
-
+                <!-- patient area -->
+                <?php if($this->session->userdata('type') == 1): ?>
                 <li>
                     <a href="<?php echo base_url('doctors'); ?>">
                         <i class="pe-7s-users"></i>
@@ -127,12 +131,7 @@
                         <p>Documents</p>
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo base_url('patient_profile'); ?>">
-                        <i class="pe-7s-user"></i>
-                        <p>Patient Profile</p>
-                    </a>
-                </li>
+                <?php endif; ?>
                 
             </ul>
     	</div>
@@ -152,23 +151,31 @@
                     <?php echo isset($dom) ? $dom : ""; ?>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <!-- <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-                            </a>
-                        </li>
-                    </ul>
-
+                    
                     <ul class="nav navbar-nav navbar-right">
+                        <?php if($this->session->userdata("type") == 1): ?>
                         <li>
-                           <a href="">
-                               Account
+                           <a href="<?php echo base_url('/patient_profile'); ?>">
+                               My Profile
                             </a>
                         </li>
+                        <?php elseif($this->session->userdata("type") == 2):  ?>
+                        <li>
+                           <a href="<?php echo base_url('/doctor_profile'); ?>">
+                               My Profile
+                            </a>
+                        </li>
+                        <?php endif; ?>
 
+                        <?php if($this->session->userdata('logged_in')): ?>
+                        <li>
+                           <a href="<?php echo base_url('/logout'); ?>">
+                               Logout
+                            </a>
+                        </li>
+                        <?php endif; ?>
 
-                    </ul> -->
+                    </ul>
                 </div>
             </div>
         </nav>

@@ -7,16 +7,37 @@ class UsersController extends CI_Controller {
     {
         parent::__construct();
 
-        $this->load->model('auth/auth');
+        $this->load->model('admin/users');
 
     }
 
     public function index(){
+        $data = $this->input->get();
+        $this->flash->old($data);
+
     	$data = [
     		"view" => "admin/users",
-    		"title" => "Users"
+    		"title" => "Users",
+            "users" => $this->users->users($data)
     	];
-        $this->load->view("admin/template", $data);
+        $this->load->view("template", $data);
     }
+
+    public function deactivate($id = 0){
+        return $this->users->deactivate($id);
+    }
+
+    public function activate($id = 0){
+        return $this->users->activate($id);
+    }
+
+    public function reset($id = 0){
+        return $this->users->reset($id);
+    }
+
+    public function delete($id = 0){
+        return $this->users->delete($id);
+    }
+
 
 }

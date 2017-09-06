@@ -105,10 +105,10 @@
 		var contentObj = {
 			content: {
 				message: typeof content === 'object' ? content.message : content,
-				title: content.title ? content.title : '',
-				icon: content.icon ? content.icon : '',
-				url: content.url ? content.url : '#',
-				target: content.target ? content.target : '-'
+				title: typeof content === 'object' && content.title ? content.title : '',
+				icon: typeof content === 'object' && content.icon ? content.icon : '',
+				url: typeof content === 'object' && content.url ? content.url : '#',
+				target: typeof content === 'object' && content.target ? content.target : '-'
 			}
 		};
 

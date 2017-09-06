@@ -21,9 +21,14 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
-		$data = [
-			"view" => "index"
-		];
-		$this->load->view("template", $data);
+		if($this->session->userdata("type") == 1){
+			return redirect('/doctors');
+		}else if($this->session->userdata("type") == 2){
+			return redirect('/appointments');
+		}else if($this->session->userdata("type") == 99){
+			return redirect('/users');
+		}else{
+			return redirect('/login');
+		}
 	}
 }
